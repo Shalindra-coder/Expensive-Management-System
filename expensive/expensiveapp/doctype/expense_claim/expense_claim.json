@@ -15,17 +15,18 @@
  "fields": [
   {
    "fieldname": "employee",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Employee",
+   "options": "Employee",
    "reqd": 1
   },
   {
    "fieldname": "expense_type",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Expense Type",
-   "options": "Travel,\nMeals,\nMeals",
+   "options": "Category",
    "reqd": 1
   },
   {
@@ -57,7 +58,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-10-07 17:19:26.041937",
+ "modified": "2024-10-07 21:36:44.824652",
  "modified_by": "Administrator",
  "module": "ExpensiveApp",
  "name": "Expense Claim",
@@ -98,6 +99,7 @@
    "role": "Expense Manager",
    "select": 1,
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
