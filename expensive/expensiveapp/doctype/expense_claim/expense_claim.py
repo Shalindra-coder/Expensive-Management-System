@@ -6,7 +6,10 @@ from frappe.model.document import Document
 
 
 class ExpenseClaim(Document):
-  def validate(self):
-        if self.amount <= 0:
-            frappe.throw("Amount must be greater than zero.")
-
+ def before_save(self):
+    total = 0
+    for item in self.add_items:
+        total += item.amount
+    self.total_amount = total
+          
+    

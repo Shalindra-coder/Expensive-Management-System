@@ -7,9 +7,14 @@
  "engine": "InnoDB",
  "field_order": [
   "employee",
-  "expense_type",
-  "amount",
+  "column_break_hmdc",
   "date",
+  "section_break_mvfd",
+  "add_items",
+  "section_break_akvd",
+  "message",
+  "section_break_cnke",
+  "total_amount",
   "amended_from"
  ],
  "fields": [
@@ -19,22 +24,6 @@
    "in_list_view": 1,
    "label": "Employee",
    "options": "Employee",
-   "reqd": 1
-  },
-  {
-   "fieldname": "expense_type",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Expense Type",
-   "options": "Category",
-   "reqd": 1
-  },
-  {
-   "fieldname": "amount",
-   "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Amount",
-   "non_negative": 1,
    "reqd": 1
   },
   {
@@ -53,12 +42,47 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "column_break_hmdc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_mvfd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "add_items",
+   "fieldtype": "Table",
+   "label": "Add_items",
+   "options": "Expense Type"
+  },
+  {
+   "fieldname": "section_break_cnke",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_akvd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Text Editor",
+   "label": "Message",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-10-07 21:36:44.824652",
+ "modified": "2024-10-08 16:09:33.976015",
  "modified_by": "Administrator",
  "module": "ExpensiveApp",
  "name": "Expense Claim",
@@ -82,12 +106,13 @@
    "delete": 1,
    "email": 1,
    "export": 1,
+   "if_owner": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "Employee",
+   "select": 1,
    "share": 1,
-   "submit": 1,
    "write": 1
   },
   {
