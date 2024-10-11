@@ -5,7 +5,7 @@ import frappe
 from frappe.model.document import Document
 
 
-class ExpenseClaim(Document):
+class ExpenseClaims(Document):
  def before_save(self):
     total = 0
     for item in self.add_items:

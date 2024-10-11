@@ -1,7 +1,6 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "prompt",
  "creation": "2024-10-07 11:33:06.297528",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -20,10 +19,9 @@
  "fields": [
   {
    "fieldname": "employee",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Employee",
-   "options": "Employee",
    "reqd": 1
   },
   {
@@ -38,7 +36,7 @@
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Expense Claim",
+   "options": "Expense Claims",
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
@@ -82,11 +80,10 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-10-08 16:09:33.976015",
+ "modified": "2024-10-09 11:53:53.137654",
  "modified_by": "Administrator",
  "module": "ExpensiveApp",
- "name": "Expense Claim",
- "naming_rule": "Set by user",
+ "name": "Expense Claims",
  "owner": "Administrator",
  "permissions": [
   {
@@ -130,5 +127,6 @@
  ],
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "employee"
 }
